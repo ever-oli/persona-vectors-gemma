@@ -1,6 +1,6 @@
 # Persona Vectors in Gemma 4
 
-Replication and extension of [Chen et al. (arXiv 2025) — *Persona Vectors: Monitoring Character Traits in LLMs*](https://arxiv.org/abs/2502.12024) using **Gemma 4 on Apple Silicon (MLX)**. Four papers, five traits, one M4 Mac Mini.
+Replication and extension of [Chen et al. (arXiv 2507.21509) — *Persona Vectors: Monitoring and Controlling Character Traits in Language Models*](https://arxiv.org/abs/2507.21509) using **Gemma 4 on Apple Silicon (MLX)**. Four papers, five traits, one M4 Mac Mini.
 
 ---
 
@@ -107,8 +107,9 @@ results/
 
 ## Related Work
 
-- Chen et al. 2025 — *Persona Vectors* (this paper's foundation)
-- Chen et al. NAACL 2025 — *Superficial Knowledge in Alignment*
+- Chen et al. 2025 — [*Persona Vectors: Monitoring and Controlling Character Traits in Language Models*](https://arxiv.org/abs/2507.21509) (this paper's foundation)
+- Chen et al. NAACL 2025 — [*Extracting and Understanding the Superficial Knowledge in Alignment*](https://arxiv.org/abs/2502.04602)
+- Chen et al. COLM 2025 — [*SEAL: Steerable Reasoning Calibration of Large Language Models for Free*](https://arxiv.org/abs/2504.07986)
 - Zou et al. 2023 — *Representation Engineering*
 - Turner et al. 2023 — *Activation Addition*
 
@@ -118,49 +119,57 @@ results/
 
 ### Foundational Work
 
-1. **Chen, R., et al. (2025).** Persona Vectors: Extracting and Steering Personality Traits in Large Language Models. *arXiv preprint*.
+1. **Chen, R., Arditi, A., Sleight, H., Evans, O., & Lindsey, J. (2025).** Persona Vectors: Monitoring and Controlling Character Traits in Language Models. *arXiv:2507.21509*. https://arxiv.org/abs/2507.21509
 
-2. **Chen, R., et al. (2025).** Superficial Knowledge in Alignment: A Mechanistic Analysis. *NAACL 2025*.
+2. **Chen, R., Perin, G. J., Chen, X., Chen, X., Han, Y., Hirata, N. S. T., Hong, J., & Kailkhura, B. (2025).** Extracting and Understanding the Superficial Knowledge in Alignment. *NAACL 2025*. arXiv:2502.04602. https://arxiv.org/abs/2502.04602
 
-3. **Chen, R., et al. (2025).** SEAL: Steerable Reasoning for Language Models. *ICLR 2025*.
+3. **Chen, R., Zhang, Z., Hong, J., Kundu, S., & Wang, Z. (2025).** SEAL: Steerable Reasoning Calibration of Large Language Models for Free. *COLM 2025*. arXiv:2504.07986. https://arxiv.org/abs/2504.07986
 
 ### This Repository
 
-4. **Ortiz, E. (2025).** *Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry*. GitHub repository: https://github.com/ever-oli/persona-vectors-gemma
+4. **Olivares, E. (2025).** *Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry*. GitHub repository: https://github.com/ever-oli/persona-vectors-gemma
 
-   - **Study 1:** Replication of Persona Vectors on Gemma 4 (150 contrastive pairs × 5 traits)
-   
-   - **Study 2:** Cross-model comparison — Base vs. Instruction-Tuned Gemma 4 reveals RLHF relocates and rotates existing trait representations (cosine similarity 0.01–0.15) rather than creating them from scratch
-   
-   - **Study 3:** Plain-text control study — Validates that base model genuinely encodes behavioral traits at depth (layers 0, 3, 12, 25), not surface-level artifacts
-   
-   - **Study 4:** Behavioral geometry map — 5×5 cosine similarity matrix revealing entanglement between verbosity and reasoning (cos 0.35) and orthogonality of helpfulness and reasoning (cos 0.003)
+   - **Study 1:** Replication of Chen et al. (2025) Persona Vectors on Gemma 4 (150 contrastive pairs × 5 traits)
+   - **Study 2:** Base vs. instruction-tuned Gemma 4 — RLHF relocates and rotates existing trait representations (cosine similarity 0.01–0.15) rather than creating them from scratch
+   - **Study 3:** Plain-text control — validates that base model genuinely encodes behavioral traits at depth (layers 0, 3, 12, 25), not a prompt-format artifact
+   - **Study 4:** Behavioral geometry map — 5×5 cosine similarity matrix revealing verbosity–reasoning entanglement (cos 0.35) and helpfulness–reasoning orthogonality (cos 0.003)
 
 ---
 
 ## Citation
 
-If you use this work, please cite:
-
 ```bibtex
-@misc{ortiz2025personagemma,
-  author = {Ortiz, Ever},
-  title = {Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry},
-  year = {2025},
+@misc{olivares2025personagemma,
+  author    = {Olivares, Ever},
+  title     = {Persona Vectors in Gemma 4 via {MLX}: Alignment Taxonomy and Behavioral Geometry},
+  year      = {2025},
   publisher = {GitHub},
-  journal = {GitHub repository},
   howpublished = {\url{https://github.com/ever-oli/persona-vectors-gemma}},
-  note = {Replication and extension of Chen et al. (2025) Persona Vectors}
+  note      = {Replication and extension of Chen et al.\ arXiv:2507.21509}
 }
 ```
 
-And the foundational work:
+Foundational work:
 
 ```bibtex
 @article{chen2025persona,
-  title={Persona Vectors: Extracting and Steering Personality Traits in Large Language Models},
-  author={Chen, Runjin and others},
-  journal={arXiv preprint},
-  year={2025}
+  title   = {Persona Vectors: Monitoring and Controlling Character Traits in Language Models},
+  author  = {Chen, Runjin and Arditi, Andy and Sleight, Henry and Evans, Owain and Lindsey, Jack},
+  journal = {arXiv preprint arXiv:2507.21509},
+  year    = {2025}
+}
+
+@inproceedings{chen2025superficial,
+  title     = {Extracting and Understanding the Superficial Knowledge in Alignment},
+  author    = {Chen, Runjin and Perin, Gabriel Jacob and Chen, Xuxi and Chen, Xilun and Han, Yan and Hirata, Nina S. T. and Hong, Junyuan and Kailkhura, Bhavya},
+  booktitle = {Proceedings of NAACL 2025},
+  year      = {2025}
+}
+
+@inproceedings{chen2025seal,
+  title     = {{SEAL}: Steerable Reasoning Calibration of Large Language Models for Free},
+  author    = {Chen, Runjin and Zhang, Zhenyu and Hong, Junyuan and Kundu, Souvik and Wang, Zhangyang},
+  booktitle = {Proceedings of COLM 2025},
+  year      = {2025}
 }
 ```
