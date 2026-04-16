@@ -111,3 +111,56 @@ results/
 - Chen et al. NAACL 2025 — *Superficial Knowledge in Alignment*
 - Zou et al. 2023 — *Representation Engineering*
 - Turner et al. 2023 — *Activation Addition*
+
+---
+
+## References
+
+### Foundational Work
+
+1. **Chen, R., et al. (2025).** Persona Vectors: Extracting and Steering Personality Traits in Large Language Models. *arXiv preprint*.
+
+2. **Chen, R., et al. (2025).** Superficial Knowledge in Alignment: A Mechanistic Analysis. *NAACL 2025*.
+
+3. **Chen, R., et al. (2025).** SEAL: Steerable Reasoning for Language Models. *ICLR 2025*.
+
+### This Repository
+
+4. **Ortiz, E. (2025).** *Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry*. GitHub repository: https://github.com/ever-oli/persona-vectors-gemma
+
+   - **Study 1:** Replication of Persona Vectors on Gemma 4 (150 contrastive pairs × 5 traits)
+   
+   - **Study 2:** Cross-model comparison — Base vs. Instruction-Tuned Gemma 4 reveals RLHF relocates and rotates existing trait representations (cosine similarity 0.01–0.15) rather than creating them from scratch
+   
+   - **Study 3:** Plain-text control study — Validates that base model genuinely encodes behavioral traits at depth (layers 0, 3, 12, 25), not surface-level artifacts
+   
+   - **Study 4:** Behavioral geometry map — 5×5 cosine similarity matrix revealing entanglement between verbosity and reasoning (cos 0.35) and orthogonality of helpfulness and reasoning (cos 0.003)
+
+---
+
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@misc{ortiz2025personagemma,
+  author = {Ortiz, Ever},
+  title = {Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry},
+  year = {2025},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/ever-oli/persona-vectors-gemma}},
+  note = {Replication and extension of Chen et al. (2025) Persona Vectors}
+}
+```
+
+And the foundational work:
+
+```bibtex
+@article{chen2025persona,
+  title={Persona Vectors: Extracting and Steering Personality Traits in Large Language Models},
+  author={Chen, Runjin and others},
+  journal={arXiv preprint},
+  year={2025}
+}
+```
