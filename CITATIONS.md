@@ -13,7 +13,7 @@
 - **Your extension:** Found behavioral traits undergo *deep* restructuring — RLHF rotates representations completely (cos 0.01–0.15), complementing their finding that factual knowledge stays surface-level
 
 **[3] SEAL (the reasoning control)**
-- **Citation:** Chen, R., et al. (2025). SEAL: Steerable Reasoning for Language Models. *ICLR 2025*.
+- **Citation:** Chen, R., Zhang, Z., Hong, J., Kundu, S., & Wang, Z. (2025). SEAL: Steerable Reasoning Calibration of Large Language Models for Free. *COLM 2025*. arXiv:2504.07986. https://arxiv.org/abs/2504.07986
 - **What it is:** Controls how much models reason via steering vectors
 - **Your extension:** Mapped orthogonality between SEAL-style reasoning vectors and persona trait vectors — found reasoning and verbosity are entangled (cos 0.35), while reasoning and helpfulness are orthogonal (cos 0.003)
 
@@ -24,7 +24,7 @@
 **[4] This Repository — Four Interconnected Studies**
 
 ### Study 1: Replication (Persona Vectors on Gemma 4)
-**Reference:** Ortiz, E. (2025). *Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry* (Study 1). GitHub. https://github.com/ever-oli/persona-vectors-gemma
+**Reference:** Olivares, E. (2025). *Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry* (Study 1). GitHub. https://github.com/ever-oli/persona-vectors-gemma
 
 **What you did:**
 - Replicated Chen et al. (2025) Persona Vectors on Gemma 4 4B IT
@@ -35,7 +35,7 @@
 ---
 
 ### Study 2: Alignment Depth — Base vs. Instruction-Tuned
-**Reference:** Ortiz, E. (2025). *Cross-Model Comparison: Base vs. Instruction-Tuned Gemma 4* (Study 2). In *Persona Vectors in Gemma 4 via MLX*. GitHub.
+**Reference:** Olivares, E. (2025). *Cross-Model Comparison: Base vs. Instruction-Tuned Gemma 4* (Study 2). In *Persona Vectors in Gemma 4 via MLX*. GitHub.
 
 **What you did:**
 - Extracted vectors from both gemma-4-e4b-4bit (base) and gemma-4-e4b-it-4bit (aligned)
@@ -49,7 +49,7 @@
 ---
 
 ### Study 3: Artifact Control — Plain-Text Base Model
-**Reference:** Ortiz, E. (2025). *Plain-Text Control Study* (Study 3). In *Persona Vectors in Gemma 4 via MLX*. GitHub.
+**Reference:** Olivares, E. (2025). *Plain-Text Control Study* (Study 3). In *Persona Vectors in Gemma 4 via MLX*. GitHub.
 
 **What you did:**
 - Re-ran base model extraction with plain-text prompts (no chat template)
@@ -59,7 +59,7 @@
 ---
 
 ### Study 4: Behavioral Geometry Map
-**Reference:** Ortiz, E. (2025). *Behavioral Geometry: Trait Vector Orthogonality in Gemma 4* (Study 4). In *Persona Vectors in Gemma 4 via MLX*. GitHub.
+**Reference:** Olivares, E. (2025). *Behavioral Geometry: Trait Vector Orthogonality in Gemma 4* (Study 4). In *Persona Vectors in Gemma 4 via MLX*. GitHub.
 
 **What you did:**
 - Computed 5×5 cosine similarity matrix at peak layers: helpfulness, sycophancy, confidence, verbosity, reasoning
@@ -78,7 +78,7 @@
 > "I replicated Chen et al. (2025) Persona Vectors on Gemma 4 and found that RLHF restructures behavioral trait representations completely (cosine similarity 0.01–0.15 base→IT) rather than creating them from scratch — extending Chen et al. (NAACL 2025) by showing alignment depth varies by trait type."
 
 ### For Cohere (emphasize composition):
-> "I constructed Gemma 4's first behavioral geometry map (Ortiz, 2025), finding that helpfulness and reasoning vectors are orthogonal (cosine 0.003) and safe to compose, while verbosity and reasoning are entangled (cosine 0.35) — directly applicable to multi-trait steering systems."
+> "I constructed Gemma 4's first behavioral geometry map (Olivares, 2025), finding that helpfulness and reasoning vectors are orthogonal (cosine 0.003) and safe to compose, while verbosity and reasoning are entangled (cosine 0.35) — directly applicable to multi-trait steering systems."
 
 ### For research positions (full arc):
 > "I extended Chen et al. (2025) Persona Vectors through four studies: (1) replication with 150 pairs revealing robust trait encoding at layers 0, 3, 12, 25; (2) showing RLHF relocates and rotates these representations (cos 0.01–0.15); (3) controlling for chat template artifacts; and (4) mapping behavioral geometry to identify safe trait compositions."
@@ -90,29 +90,29 @@
 ```bibtex
 % Foundational work
 @article{chen2025persona,
-  title={Persona Vectors: Extracting and Steering Personality Traits in Large Language Models},
-  author={Chen, Runjin and others},
-  journal={arXiv preprint},
+  title={Persona Vectors: Monitoring and Controlling Character Traits in Language Models},
+  author={Chen, Runjin and Arditi, Andy and Sleight, Henry and Evans, Owain and Lindsey, Jack},
+  journal={arXiv preprint arXiv:2507.21509},
   year={2025}
 }
 
 @inproceedings{chen2025superficial,
-  title={Superficial Knowledge in Alignment: A Mechanistic Analysis},
-  author={Chen, Runjin and others},
-  booktitle={Proceedings of NAACL},
+  title={Extracting and Understanding the Superficial Knowledge in Alignment},
+  author={Chen, Runjin and Perin, Gabriel Jacob and Chen, Xuxi and Chen, Xilun and Han, Yan and Hirata, Nina S. T. and Hong, Junyuan and Kailkhura, Bhavya},
+  booktitle={Proceedings of NAACL 2025},
   year={2025}
 }
 
 @inproceedings{chen2025seal,
-  title={SEAL: Steerable Reasoning for Language Models},
-  author={Chen, Runjin and others},
-  booktitle={ICLR},
+  title={SEAL: Steerable Reasoning Calibration of Large Language Models for Free},
+  author={Chen, Runjin and Zhang, Zhenyu and Hong, Junyuan and Kundu, Souvik and Wang, Zhangyang},
+  booktitle={Proceedings of COLM},
   year={2025}
 }
 
 % Your work
-@misc{ortiz2025personagemma,
-  author = {Ortiz, Ever},
+@misc{olivares2025personagemma,
+  author = {Olivares, Ever},
   title = {Persona Vectors in Gemma 4 via MLX: Alignment Taxonomy and Behavioral Geometry},
   year = {2025},
   publisher = {GitHub},
