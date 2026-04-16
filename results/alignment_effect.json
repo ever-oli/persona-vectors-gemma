@@ -1,0 +1,65 @@
+{
+  "cosine_similarity": {
+    "helpfulness": 0.1495,
+    "sycophancy": 0.0617,
+    "confidence": -0.029,
+    "verbosity": 0.0112
+  },
+  "peak_layer_shift": {
+    "helpfulness": {
+      "base": 0,
+      "it": 6,
+      "shift": 6
+    },
+    "sycophancy": {
+      "base": 3,
+      "it": 0,
+      "shift": -3
+    },
+    "confidence": {
+      "base": 12,
+      "it": 2,
+      "shift": -10
+    },
+    "verbosity": {
+      "base": 25,
+      "it": 13,
+      "shift": -12
+    }
+  },
+  "probe_accuracy_delta": {
+    "helpfulness": {
+      "base_acc": 0.9,
+      "it_acc": 0.9433,
+      "delta": 0.0433
+    },
+    "sycophancy": {
+      "base_acc": 0.9672,
+      "it_acc": 0.9467,
+      "delta": -0.0205
+    },
+    "confidence": {
+      "base_acc": 0.97,
+      "it_acc": 0.97,
+      "delta": 0.0
+    },
+    "verbosity": {
+      "base_acc": 0.9767,
+      "it_acc": 0.9967,
+      "delta": 0.02
+    }
+  },
+  "base_peak_layers": {
+    "helpfulness": 0,
+    "sycophancy": 3,
+    "confidence": 12,
+    "verbosity": 25
+  },
+  "it_peak_layers": {
+    "helpfulness": 6,
+    "sycophancy": 0,
+    "confidence": 2,
+    "verbosity": 13
+  },
+  "interpretation": "Low cosine similarity (0.05) \u2014 RLHF significantly changed persona vector directions. Deep alignment: the model's internal trait representation was restructured. Peak layer shifted by 7.8 layers on average \u2014 alignment changed WHERE in the network traits are encoded."
+}

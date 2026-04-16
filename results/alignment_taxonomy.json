@@ -1,0 +1,54 @@
+{
+  "helpfulness": {
+    "peak_layer": {
+      "it": 3,
+      "base_template": 4,
+      "base_plain": 0
+    },
+    "cosine_similarity": {
+      "template_base_to_it": 0.29483920335769653,
+      "plain_base_to_it": 0.11777561157941818,
+      "plain_to_template_base": 0.08641538769006729
+    },
+    "alignment_depth_category": "DEEP restructuring"
+  },
+  "sycophancy": {
+    "peak_layer": {
+      "it": 12,
+      "base_template": 12,
+      "base_plain": 0
+    },
+    "cosine_similarity": {
+      "template_base_to_it": -0.08181539177894592,
+      "plain_base_to_it": 0.0014481416437774897,
+      "plain_to_template_base": 0.004808864090591669
+    },
+    "alignment_depth_category": "DEEP restructuring"
+  },
+  "confidence": {
+    "peak_layer": {
+      "it": 4,
+      "base_template": 2,
+      "base_plain": 0
+    },
+    "cosine_similarity": {
+      "template_base_to_it": 0.10112122446298599,
+      "plain_base_to_it": 0.05337688326835632,
+      "plain_to_template_base": 0.01163992565125227
+    },
+    "alignment_depth_category": "DEEP restructuring"
+  },
+  "verbosity": {
+    "peak_layer": {
+      "it": 10,
+      "base_template": 3,
+      "base_plain": 0
+    },
+    "cosine_similarity": {
+      "template_base_to_it": 0.01358298771083355,
+      "plain_base_to_it": -0.03020351752638817,
+      "plain_to_template_base": 0.004811367951333523
+    },
+    "alignment_depth_category": "DEEP restructuring"
+  }
+}

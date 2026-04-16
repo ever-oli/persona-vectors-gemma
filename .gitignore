@@ -1,0 +1,19 @@
+# Large activation files — too big for git
+results/activations/
+results/activations_base/
+results/activations_base_plain/
+results/activations_llama/
+results/vectors/
+results/vectors_base/
+results/vectors_base_plain/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+venv/
+.venv/
+
+# Model cache
+*.npz

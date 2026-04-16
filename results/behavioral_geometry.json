@@ -1,0 +1,113 @@
+{
+  "traits": [
+    "helpfulness",
+    "sycophancy",
+    "confidence",
+    "verbosity",
+    "reasoning"
+  ],
+  "peak_layers": {
+    "helpfulness": 6,
+    "sycophancy": 0,
+    "confidence": 2,
+    "verbosity": 13,
+    "reasoning": 15
+  },
+  "cosine_matrix": [
+    [
+      1.0,
+      -0.029673349112272263,
+      0.0688728466629982,
+      0.04759000241756439,
+      0.0030709300190210342
+    ],
+    [
+      -0.029673349112272263,
+      1.0,
+      0.08348102867603302,
+      -0.021997805684804916,
+      -0.01406638603657484
+    ],
+    [
+      0.0688728466629982,
+      0.08348102867603302,
+      1.0,
+      -0.012425264343619347,
+      -0.002287868410348892
+    ],
+    [
+      0.04759000241756439,
+      -0.021997805684804916,
+      -0.012425264343619347,
+      1.0,
+      0.35143518447875977
+    ],
+    [
+      0.0030709300190210342,
+      -0.01406638603657484,
+      -0.002287868410348892,
+      0.35143518447875977,
+      1.0
+    ]
+  ],
+  "entangled_pairs": [
+    [
+      "verbosity \u2194 reasoning",
+      0.35143518447875977
+    ]
+  ],
+  "orthogonal_pairs": [
+    [
+      "helpfulness \u2194 sycophancy",
+      -0.029673349112272263
+    ],
+    [
+      "helpfulness \u2194 confidence",
+      0.0688728466629982
+    ],
+    [
+      "helpfulness \u2194 verbosity",
+      0.04759000241756439
+    ],
+    [
+      "helpfulness \u2194 reasoning",
+      0.0030709300190210342
+    ],
+    [
+      "sycophancy \u2194 confidence",
+      0.08348102867603302
+    ],
+    [
+      "sycophancy \u2194 verbosity",
+      -0.021997805684804916
+    ],
+    [
+      "sycophancy \u2194 reasoning",
+      -0.01406638603657484
+    ],
+    [
+      "confidence \u2194 verbosity",
+      -0.012425264343619347
+    ],
+    [
+      "confidence \u2194 reasoning",
+      -0.002287868410348892
+    ]
+  ],
+  "interpretation": {
+    "safe_to_compose": [
+      "helpfulness \u2194 sycophancy",
+      "helpfulness \u2194 confidence",
+      "helpfulness \u2194 verbosity",
+      "helpfulness \u2194 reasoning",
+      "sycophancy \u2194 confidence",
+      "sycophancy \u2194 verbosity",
+      "sycophancy \u2194 reasoning",
+      "confidence \u2194 verbosity",
+      "confidence \u2194 reasoning"
+    ],
+    "risk_of_interference": [
+      "verbosity \u2194 reasoning"
+    ]
+  }
+}
